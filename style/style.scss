@@ -1,0 +1,409 @@
+@use "variables" as *;
+@use "mixin" as *;
+@use "sass:color";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $body-bg-color;
+}
+
+@font-face {
+  font-family: "MyFont";
+  src: url("../font/MissStanfortRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// SOFIA & JONATHANS DEL
+header {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fcf9ea;
+  align-items: center;
+  margin-top: 20px;
+
+  .nav-mobile {
+    display: flex;
+    align-items: center;
+
+    #menu-toggle {
+      display: none;
+    }
+    .menu-icon {
+      display: block;
+    }
+    .menu {
+      display: none;
+      list-style: none;
+      flex-direction: column;
+      background-color: #f7f7f0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 30%;
+      height: 100vh;
+      z-index: 10;
+
+      a {
+        display: block;
+        padding: 10px 15px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: small;
+      }
+
+      a:hover {
+        background-color: #f8f4dd;
+        font-size: 15px;
+      }
+    }
+
+    .menu-close {
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        max-width: 20%;
+      }
+    }
+
+    #menu-toggle:checked + .menu-icon + .menu {
+      display: flex;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .logga {
+    margin: auto;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    h2 {
+      font-family: MyFont;
+      font-size: 30px;
+      font-weight: 600;
+      color: rgb(19, 17, 15);
+    }
+    img {
+      width: 20px;
+    }
+  }
+
+  .nav-desktop {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-basis: 100%;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+}
+
+article {
+  @include card;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    .event-section,
+    .books-section {
+      width: 45%;
+    }
+
+    .book-button {
+      cursor: pointer;
+    }
+  }
+
+  .btn-link-page {
+    @include button;
+    &:hover {
+      background-color: color.adjust($btn-color, $lightness: -2%);
+    }
+  }
+
+  // finns inte i index, kanske flytta på den?
+  .contact {
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+// delar bas styling, kanske göra den till en mixin?
+.info-section,
+.event-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.page-icon {
+  margin: 0.3rem auto;
+  fill: adjust-color($card-color, $lightness: -20%);
+}
+
+// welcome text in index.html, text delen + kontakta oss i books+event.html
+.info-section {
+  p {
+    position: relative;
+    margin: 1rem 0.75rem;
+    padding-bottom: 1rem;
+    width: 80%;
+  }
+
+  p::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      $card-color,
+      transparent
+    );
+    z-index: 2;
+  }
+}
+
+.event-section {
+  h2 {
+    @include h2-style;
+  }
+
+  // MALINS DEL
+  .event-form {
+    form {
+      border-radius: $primary-radius;
+      background-color: $card-color;
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-self: center;
+      position: absolute;
+      z-index: 1;
+      padding: 0.3rem;
+      padding-bottom: 0.8rem;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.45s, opacity 0.45s;
+    }
+
+    .event-toggle {
+      display: none;
+    }
+
+    .book-button {
+      display: block;
+      text-align: center;
+      padding: 0.3rem 0.7rem;
+      font-weight: 500;
+    }
+
+    .book-button:hover {
+      color: rgba(0, 0, 0, 0.574);
+      scale: 1.05;
+      transition: color 0.15s, scale 0.15s;
+    }
+
+    .close-button {
+      display: flex;
+      justify-content: flex-end;
+
+      svg {
+        width: 24px;
+        height: 24px;
+        transition: scale 0.15s, fill 0.15s;
+      }
+
+      svg:hover {
+        fill: rgba(0, 0, 0, 0.574);
+        scale: 1.05;
+      }
+    }
+
+    input {
+      border: $btn-color solid 0.063rem;
+      font-size: 1rem;
+    }
+
+    .event-toggle:checked + .book-button + form {
+      max-height: 1000px;
+      opacity: 1;
+      transition: max-height 0.45s, opacity 0.45s;
+    }
+  }
+}
+
+.books-section {
+  // RASMUS DEL
+  display: flex;
+  flex-direction: column;
+  .top10 {
+    list-style: none;
+    counter-reset: myCounter;
+    padding: 0.5rem;
+    margin: auto;
+
+    li {
+      counter-increment: myCounter;
+      display: flex;
+      position: relative;
+      padding: 10px 0;
+    }
+
+    li::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      width: 80%;
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        $card-color,
+        transparent
+      );
+    }
+
+    li::before {
+      content: counter(myCounter);
+      position: relative;
+      width: 24px;
+      height: 24px;
+      border: 2px solid $card-color;
+      background-color: $card-color;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    li:last-child::after {
+      content: none;
+    }
+  }
+
+  // ska article kanske få ett klassnamn?
+  article {
+    @include card-book;
+    display: flex;
+    flex-direction: row;
+
+    .book-info {
+      padding: 1rem;
+      padding-bottom: 6px;
+
+      svg {
+        margin-left: auto;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      b {
+        font-weight: 600;
+      }
+      h3 {
+        text-decoration: underline;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  h2 {
+    @include h2-style;
+  }
+
+  @media screen and (min-width: 768px) {
+    .top10 {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+    }
+
+    .top10::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      width: 80%;
+      height: 2px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        $card-color,
+        transparent
+      );
+    }
+  }
+}
+
+// DESKTOPVY MALIN RASMUS
+@media (min-width: 768px) {
+  .event-page-main,
+  .book-page-main {
+    // ska det vara en mixin här också?
+    .event-section,
+    .books-section {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: stretch;
+      width: 100vw;
+    }
+  }
+
+  // denna del är till event page only just nu, där är den flyttad från kod rad 387
+  .event-page-main {
+    article {
+      width: 30%;
+      min-height: 100%;
+    }
+  }
+
+  // kommer inte ihåg vad jag skulle testa här :P
+  .book-page-main {
+    article {
+      flex: 1 1 350px;
+      box-sizing: border-box; // behövs den?
+      margin: 2rem;
+    }
+  }
+}

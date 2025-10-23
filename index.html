@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> Padding och Margin funkar inte med denna länk -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Pärmar & Poesi 🤣🤪😂👁👄👁</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav-mobile">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <nav class="menu">
+          <nav class="menu-close">
+            <img
+              src="style/assets/Parmarpoesilogo.webp"
+              alt="Pärmar och poesi logotyp"
+            />
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#1f1f1f"
+              >
+                <path
+                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                />
+              </svg>
+            </label>
+          </nav>
+          <ul>
+            <li>
+              <a href="/event.html">Evenemang</a>
+            </li>
+            <li>
+              <a href="/books.html">Böcker</a>
+            </li>
+            <li>
+              <a href="#">Kontakta oss</a>
+            </li>
+          </ul>
+        </nav>
+      </nav>
+
+      <a href="index.html" class="logga"
+        ><h2>Pärmar</h2>
+        <img
+          src="style/assets/Parmarpoesilogo.webp"
+          alt="Pärmar och poesi logotyp"
+        />
+        <h2>Poesi</h2></a
+      >
+      <nav class="nav-desktop">
+        <a href="event.html">Evenemang</a>
+        <a href="books.html">Boknyheter</a>
+        <a href="#contact">Kontakta oss</a>
+      </nav>
+    </header>
+
+    <main>
+      <aside class="info-section">
+        <p>
+          <b>Välkommen till en bokhandel full av liv!</b> Hos oss hittar du de
+          senaste boknyheterna, inspirerande författarsamtal och unika evenemang
+          för alla med en brinnande passion för litteratur. Titta in, njut av en
+          stund med din favoritbok och en varm kopp kaffe, och dela läsglädjen
+          med andra lusläsare
+        </p>
+      </aside>
+
+      <section class="event-section">
+        <h2>Aktuella evenemang</h2>
+        <a href="event.html" class="btn-link-page">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+          >
+            <path
+              d="M438-226 296-368l58-58 84 84 168-168 58 58-226 226ZM200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z"
+            />
+          </svg>
+          Se alla evenemang
+        </a>
+
+        <!-- Card Item -->
+        <article>
+          <img
+            src="https://imageio.forbes.com/blogs-images/zackomalleygreenburg/files/2015/06/0626_celeb100-jackie-chan_1200x675.jpg?height=400&width=711&fit=bounds"
+            alt="Skådespelaren Jackie Chan ler med tänder och håller upp båda händerna i en firande position"
+          />
+          <h3>Chris P. Baycon - En smak av berättelser</h3>
+          <p>
+            <strong>Datum & tid:</strong>15 oktober 2024, 18:00-20:00
+            <br />
+          </p>
+          <p>
+            En humoristisk kväll där författare och kockar möts! Lokala
+            författare läser korta stycken ur sina verk medan kocken “Chris P.
+            Baycon” serverar smakprov inspirerade av böckerna. En fest för både
+            hjärna och mage!
+          </p>
+          <aside class="event-form">
+            <input type="checkbox" id="form-submit-1" class="event-toggle" />
+            <label for="form-submit-1" class="book-button"
+              >Boka din plats här!
+            </label>
+            <form>
+              <label for="form-submit-1" class="close-button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                >
+                  <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                  />
+                </svg>
+              </label>
+              <label for="persons">Antal personer:</label><br />
+              <input
+                type="number"
+                name="persons"
+                id="persons"
+                min="1"
+                max="10"
+              />
+              <br /><label for="name">För- och efternamn:</label><br />
+              <input type="text" id="name" name="name" value="" /><br />
+              <label for="email">Email-adress:</label><br />
+              <input type="text" id="email" name="email" value="" /><br /><br />
+              <input type="submit" value="Submit" />
+            </form>
+          </aside>
+        </article>
+
+        <article>
+          <img
+            src="style/assets/Prosecco.jpg"
+            alt="Ett fyllt glas med prosecco och en flaska står bredvid"
+          />
+          <h3>Prosa & Prosecco - Bubblor och berättelser</h3>
+          <p>
+            <strong>Datum & tid: </strong>21 november 2025, 18:00-20:30
+            <br />
+          </p>
+          <p>
+            En glittrande kväll med högläsning, humor och ett glas i handen! Vår
+            charmiga värd Selma Sprudel bjuder in till en afton där författare
+            läser ur sina verk mellan klunkarna av mousserande. Lätta samtal,
+            skratt och berättelser som bubblar lika mycket som glasen.
+          </p>
+          <aside class="event-form">
+            <input type="checkbox" id="form-submit-6" class="event-toggle" />
+            <label for="form-submit-6" class="book-button"
+              >Boka din plats här!
+            </label>
+            <form>
+              <label for="form-submit-6" class="close-button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                >
+                  <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                  />
+                </svg>
+              </label>
+              <label for="persons">Antal personer:</label><br />
+              <input
+                type="number"
+                name="persons"
+                id="persons"
+                min="1"
+                max="10"
+              />
+              <br />
+              <label for="name">För- och efternamn:</label><br />
+              <input type="text" id="name" name="name" value="" /><br />
+              <label for="email">Email-adress:</label><br />
+              <input type="text" id="email" name="email" value="" /><br /><br />
+              <input type="submit" value="Submit" />
+            </form>
+          </aside>
+        </article>
+
+        <article>
+          <img
+            src="style/assets/Lassie.jpg"
+            alt="En hund sitter på golvet med en uppslagen bok framför sig, som att han läser ur boken."
+          />
+          <h3>Läs med Lassie</h3>
+          <p>
+            <strong>Datum & tid: </strong>29 oktober 2025, 14:00-15:30
+            <br />
+          </p>
+          <p>
+            Lassie, bokhandelns fyrbenta ambassadör, leder en charmig bokstund
+            där barn får läsa högt för snälla hundar. En mjuk, mysig aktivitet
+            som stärker läslusten och ger många glada svansvift!
+          </p>
+
+          <aside class="event-form">
+            <input type="checkbox" id="form-submit-3" class="event-toggle" />
+            <label for="form-submit-3" class="book-button"
+              >Boka din plats här!
+            </label>
+            <form>
+              <label for="form-submit-3" class="close-button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                >
+                  <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                  />
+                </svg>
+              </label>
+              <label for="persons">Antal personer:</label><br />
+              <input
+                type="number"
+                name="persons"
+                id="persons"
+                min="1"
+                max="10"
+              />
+              <br />
+              <label for="name">För- och efternamn:</label><br />
+              <input type="text" id="name" name="name" value="" /><br />
+              <label for="email">Email-adress:</label><br />
+              <input type="text" id="email" name="email" value="" /><br /><br />
+              <input type="submit" value="Submit" />
+            </form>
+          </aside>
+        </article>
+      </section>
+
+      <section class="books-section">
+        <h2>Våra boknyheter</h2>
+        <a href="books.html" class="btn-link-page">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+          >
+            <path
+              d="M260-320q47 0 91.5 10.5T440-278v-394q-41-24-87-36t-93-12q-36 0-71.5 7T120-692v396q35-12 69.5-18t70.5-6Zm260 42q44-21 88.5-31.5T700-320q36 0 70.5 6t69.5 18v-396q-33-14-68.5-21t-71.5-7q-47 0-93 12t-87 36v394Zm-40 118q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q46-24 96-36t102-12q58 0 113.5 15T480-740q51-30 106.5-45T700-800q52 0 102 12t96 36q11 5 16.5 15t5.5 21v482q0 23-19.5 35t-40.5 1q-37-20-77.5-31T700-240q-60 0-116 21t-104 59ZM280-494Z"
+            />
+          </svg>
+          Se alla böcker
+        </a>
+
+        <article>
+          <aside class="ribbon-NYHET">NYHET</aside>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQb6BB-SCqoPElz42DKa4tg1TPQZU_kGt0zHkMb_7I0uEnBwQ_Dk6pOvS1dAc4Do99pdm4yt1ixXtRnlzdZkOTTqSxxH8GiUApx6xTvAw0&usqp=CAc"
+            alt="Författare: Rebecca Yarros. ONYX STORM, möt mörkret. En drake utan sin ryttare är en tragedi. En ryttare utan sin drake är död. Empyrén 3"
+          />
+          <section class="book-info">
+            <h3>ONYX STORM</h3>
+            <p>
+              "Onyx Storm" av Rebecca Yarros är en fängslande romantisk fantasy
+              som kombinerar episk äventyrsberättelse med djupa emotionella
+              band. Boken utforskar teman om makt, skuld och försoning, medan
+              den väver samman magi och mod i en värld fylld av faror och
+              kärlek.
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40px"
+              viewBox="0 -960 960 960"
+              width="40px"
+              fill="#504e4ed7"
+            >
+              <path
+                d="M291.33-271.33 244.67-318l127.66-128.67H80v-66.66h292.33L244.67-642l46.66-46.67L500-480 291.33-271.33Zm242-28.67v-66.67H880V-300H533.33Zm0-293.33V-660H880v66.67H533.33Zm120 146.66v-66.66H880v66.66H653.33Z"
+              />
+            </svg>
+          </section>
+        </article>
+
+        <article>
+          <aside class="ribbon-BS">BÄSTSÄLJARE</aside>
+          <img
+            src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRdHARUO2tdy_n8vHuFOjHFW5n_PDOF5LhY-rTTFSnkGNWJ3JD5HDq1ER42R7oF9HIADVy-loMBz6FxAnK85cedOYYa40wLxp_UxTSoaiYZQcN0abkO71g&usqp=CAc"
+            alt="Författare: Bengt Fredrikson, Andreas Palmaer. Saker som nästan ingen vet, alfabeta (inbunden)"
+          />
+          <section class="book-info">
+            <h3>Saker som nästan ingen vet</h3>
+            <p>
+              Denna berättelse utforskar människors dolda hemligheter och
+              beteenden, ofta kopplade till psykologi och sociala skuggor. Med
+              ett insiktsfullt och psykologiskt perspektiv granskar den det
+              mänskliga sinnet och hur osynliga aspekter påverkar våra liv,
+              relationer och identitet i vardagen.
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40px"
+              viewBox="0 -960 960 960"
+              width="40px"
+              fill="#504e4ed7"
+            >
+              <path
+                d="M291.33-271.33 244.67-318l127.66-128.67H80v-66.66h292.33L244.67-642l46.66-46.67L500-480 291.33-271.33Zm242-28.67v-66.67H880V-300H533.33Zm0-293.33V-660H880v66.67H533.33Zm120 146.66v-66.66H880v66.66H653.33Z"
+              />
+            </svg>
+          </section>
+        </article>
+
+        <article>
+          <aside class="ribbon-NYHET">NYHET</aside>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRxOFn_48LYKEoOIpLI_SGYmIlz7l-9Rj_3dERf3YB7G7F0GFV_KGhT209-6V5EqBHXaUOagFfVf7HpAvWS0Mn19-ODgrx5mgKsdSwb5g&usqp=CAc"
+            alt="Författare: Marion Blackwood. Empire of Flame and Throns, Flame and Thorns: Book one. (inbunden)"
+          />
+          <section class="book-info">
+            <h3>Empire of Flame and Thorns: 1</h3>
+            <p>
+              <b>Författare: Marion Blackwood.</b>
+              <br />
+              I en värld där magi och politik kolliderar, måste en ung hjälte
+              konfrontera sina mörkaste rädslor. Med svek, hemligheter och
+              brinnande passion kämpar hon för att rädda sitt kungarike och
+              hitta sin plats i ett farligt spel om makt, lojalitet och ära.
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40px"
+              viewBox="0 -960 960 960"
+              width="40px"
+              fill="#504e4ed7"
+            >
+              <path
+                d="M291.33-271.33 244.67-318l127.66-128.67H80v-66.66h292.33L244.67-642l46.66-46.67L500-480 291.33-271.33Zm242-28.67v-66.67H880V-300H533.33Zm0-293.33V-660H880v66.67H533.33Zm120 146.66v-66.66H880v66.66H653.33Z"
+              />
+            </svg>
+          </section>
+        </article>
+
+        <article>
+          <aside class="ribbon-NYHET">NYHET</aside>
+          <img
+            src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRe4IRgTfTbHzzRoPAUi-EfXpinWxxUN3eOjILaoxC_7O7yGpMoHCzp0isMKOr6PiE9yWDtjPfY6aHzPAJAWkjTdxrT0be8JiLF8m_IlA&usqp=CAc"
+            alt="Författare: Stefan Olafsson, Gustav Gelin. Uteliggarn som blev advokat, Berättat för Gustav Gelin (inbunden)"
+          />
+          <section class="book-info">
+            <h3>Uteliggaren som blev advokat</h3>
+            <p>
+              <b>Författare: Stefan Olafsson och Gustav Gelin.</b>
+              <br />
+              I "Uteliggaren som blev advokat" delar Stefan Olafsson, med hjälp
+              av journalisten Gustav Gelin, sin otroliga livsresa. Han
+              tillbringade tio år som hemlös narkoman, levde i misär och åkte in
+              på anstalter. Men när han en natt räddade en äldre kvinna på
+              Östermalm började en ny tillvaro som jurist. En hoppfull
+              berättelse om förvandling, uthållighet och att aldrig ge upp sina
+              drömmar.
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40px"
+              viewBox="0 -960 960 960"
+              width="40px"
+              fill="#504e4ed7"
+            >
+              <path
+                d="M291.33-271.33 244.67-318l127.66-128.67H80v-66.66h292.33L244.67-642l46.66-46.67L500-480 291.33-271.33Zm242-28.67v-66.67H880V-300H533.33Zm0-293.33V-660H880v66.67H533.33Zm120 146.66v-66.66H880v66.66H653.33Z"
+              />
+            </svg>
+          </section>
+        </article>
+      </section>
+    </main>
+
+    <footer
+      class="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x gap-4 md:gap-8 bg-black text-white text-sm md:text-base p-3 md:p-6"
+    >
+      <h3 class="text-xl">Pärmar & Poesi</h3>
+      <section class="p-3">
+        <h4 class="font-medium">Adress</h4>
+        <p>Gruppvägen 5</p>
+        <p>123 45 nörrland</p>
+      </section>
+      <section class="p-3">
+        <h4 class="font-medium">Öppettider</h4>
+        <p>mån-fre 09-20</p>
+        <p>lör 10-17</p>
+        <p>sön 11-15</p>
+      </section>
+      <section id="contact" class="p-3">
+        <h4 class="font-medium">Kontakt</h4>
+        <p>070 000 00 00</p>
+        <p>info@parmarpoesi.com</p>
+      </section>
+    </footer>
+  </body>
+</html>

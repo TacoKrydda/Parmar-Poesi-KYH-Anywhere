@@ -1,0 +1,417 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fcf9ea;
+}
+
+@font-face {
+  font-family: "MyFont";
+  src: url("../font/MissStanfortRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fcf9ea;
+  align-items: center;
+  margin-top: 20px;
+}
+header .nav-mobile {
+  display: flex;
+  align-items: center;
+}
+header .nav-mobile #menu-toggle {
+  display: none;
+}
+header .nav-mobile .menu-icon {
+  display: block;
+}
+header .nav-mobile .menu {
+  display: none;
+  list-style: none;
+  flex-direction: column;
+  background-color: #f7f7f0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100vh;
+  z-index: 10;
+}
+header .nav-mobile .menu a {
+  display: block;
+  padding: 10px 15px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: small;
+}
+header .nav-mobile .menu a:hover {
+  background-color: #f8f4dd;
+  font-size: 15px;
+}
+header .nav-mobile .menu-close {
+  display: flex;
+  justify-content: space-between;
+}
+header .nav-mobile .menu-close img {
+  max-width: 20%;
+}
+header .nav-mobile #menu-toggle:checked + .menu-icon + .menu {
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  header .nav-mobile {
+    display: none;
+  }
+}
+header .logga {
+  margin: auto;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+header .logga h2 {
+  font-family: MyFont;
+  font-size: 30px;
+  font-weight: 600;
+  color: rgb(19, 17, 15);
+}
+header .logga img {
+  width: 20px;
+}
+header .nav-desktop {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  header .nav-desktop {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+article {
+  border-radius: 0.625rem;
+  background-color: #eeb6a6;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.5rem;
+  overflow: hidden;
+}
+article h3 {
+  font-size: large;
+  font-weight: bold;
+  padding: 0.25rem;
+  line-height: 1.1;
+}
+article p {
+  padding: 0.5rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+}
+@media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  main .event-section,
+  main .books-section {
+    width: 45%;
+  }
+  main .book-button {
+    cursor: pointer;
+  }
+}
+main .btn-link-page {
+  display: flex;
+  flex-direction: row;
+  padding: 3px 12px 3px 12px;
+  border: 2px solid rgba(177, 63, 31, 0.8549019608);
+  background-color: #eeb6a6;
+  box-shadow: 1px 2px 1px rgba(174, 174, 174, 0.914);
+  border-radius: 0.25rem;
+  margin: 0 auto;
+  color: rgb(41, 40, 40);
+}
+main .btn-link-page svg {
+  margin-right: 5px;
+}
+main .btn-link-page:hover {
+  background-color: rgba(168.3201923077, 59.9105769231, 29.4798076923, 0.8549019608);
+}
+main .contact {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.info-section,
+.event-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.page-icon {
+  margin: 0.3rem auto;
+  fill: rgb(221.641509434, 111.7547169811, 80.358490566);
+}
+
+.info-section p {
+  position: relative;
+  margin: 1rem 0.75rem;
+  padding-bottom: 1rem;
+  width: 80%;
+}
+.info-section p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #eeb6a6, transparent);
+  z-index: 2;
+}
+
+.event-section h2 {
+  color: #eeb6a6;
+  font-size: x-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 0.5em;
+  margin: 0.3rem auto;
+}
+.event-section .event-form form {
+  border-radius: 0.625rem;
+  background-color: #eeb6a6;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  position: absolute;
+  z-index: 1;
+  padding: 0.3rem;
+  padding-bottom: 0.8rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.45s, opacity 0.45s;
+}
+.event-section .event-form .event-toggle {
+  display: none;
+}
+.event-section .event-form .book-button {
+  display: block;
+  text-align: center;
+  padding: 0.3rem 0.7rem;
+  font-weight: 500;
+}
+.event-section .event-form .book-button:hover {
+  color: rgba(0, 0, 0, 0.574);
+  scale: 1.05;
+  transition: color 0.15s, scale 0.15s;
+}
+.event-section .event-form .close-button {
+  display: flex;
+  justify-content: flex-end;
+}
+.event-section .event-form .close-button svg {
+  width: 24px;
+  height: 24px;
+  transition: scale 0.15s, fill 0.15s;
+}
+.event-section .event-form .close-button svg:hover {
+  fill: rgba(0, 0, 0, 0.574);
+  scale: 1.05;
+}
+.event-section .event-form input {
+  border: rgba(177, 63, 31, 0.8549019608) solid 0.063rem;
+  font-size: 1rem;
+}
+.event-section .event-form .event-toggle:checked + .book-button + form {
+  max-height: 1000px;
+  opacity: 1;
+  transition: max-height 0.45s, opacity 0.45s;
+}
+
+.books-section {
+  display: flex;
+  flex-direction: column;
+}
+.books-section .top10 {
+  list-style: none;
+  counter-reset: myCounter;
+  padding: 0.5rem;
+  margin: auto;
+}
+.books-section .top10 li {
+  counter-increment: myCounter;
+  display: flex;
+  position: relative;
+  padding: 10px 0;
+}
+.books-section .top10 li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #eeb6a6, transparent);
+}
+.books-section .top10 li::before {
+  content: counter(myCounter);
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #eeb6a6;
+  background-color: #eeb6a6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.books-section .top10 li:last-child::after {
+  content: none;
+}
+.books-section article {
+  border-radius: 0.625rem;
+  background-color: #eeb6a6;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+.books-section article h3 {
+  font-size: large;
+  font-weight: bold;
+  padding: 0.25rem;
+  line-height: 1.1;
+}
+.books-section article p {
+  padding: 0.25rem;
+  line-height: 1.1;
+}
+.books-section article img {
+  margin: auto 4px;
+}
+.books-section article .ribbon-NYHET,
+.books-section article .ribbon-BS {
+  position: absolute;
+  color: white;
+  padding: 4px 40px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.books-section article .ribbon-NYHET {
+  background-color: red;
+  transform: rotate(-27deg);
+  left: -37px;
+  top: 3px;
+}
+.books-section article .ribbon-BS {
+  background-color: green;
+  transform: rotate(-27deg);
+  left: -39px;
+  top: 13px;
+}
+.books-section article {
+  display: flex;
+  flex-direction: row;
+}
+.books-section article .book-info {
+  padding: 1rem;
+  padding-bottom: 6px;
+}
+.books-section article .book-info svg {
+  margin-left: auto;
+}
+.books-section article .book-info svg:hover {
+  cursor: pointer;
+}
+.books-section article .book-info b {
+  font-weight: 600;
+}
+.books-section article .book-info h3 {
+  text-decoration: underline;
+}
+.books-section article .book-info h3:hover {
+  cursor: pointer;
+}
+.books-section h2 {
+  color: #eeb6a6;
+  font-size: x-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 0.5em;
+  margin: 0.3rem auto;
+}
+@media screen and (min-width: 768px) {
+  .books-section .top10 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .books-section .top10::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #eeb6a6, transparent);
+  }
+}
+
+@media (min-width: 768px) {
+  .event-page-main .event-section,
+  .event-page-main .books-section,
+  .book-page-main .event-section,
+  .book-page-main .books-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 100vw;
+  }
+  .event-page-main article {
+    width: 30%;
+    min-height: 100%;
+  }
+  .book-page-main article {
+    flex: 1 1 350px;
+    box-sizing: border-box;
+    margin: 2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

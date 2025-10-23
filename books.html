@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Books</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav-mobile">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <nav class="menu">
+          <nav class="menu-close">
+            <img
+              src="style/assets/Parmarpoesilogo.webp"
+              alt="Pärmar och poesi logotyp"
+            />
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#1f1f1f"
+              >
+                <path
+                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                />
+              </svg>
+            </label>
+          </nav>
+          <ul>
+            <li>
+              <a href="/event.html">Evenemang</a>
+            </li>
+            <li>
+              <a href="/books.html">Böcker</a>
+            </li>
+            <li>
+              <a href="#">Kontakta oss</a>
+            </li>
+          </ul>
+        </nav>
+      </nav>
+      <a href="index.html" class="logga"
+        ><h2>Pärmar</h2>
+        <img
+          src="style/assets/Parmarpoesilogo.webp"
+          alt="Pärmar och poesi logotyp"
+        />
+        <h2>Poesi</h2></a
+      >
+      <nav class="nav-desktop">
+        <a href="index.html">Hem</a>
+        <a href="event.html">Evenemang</a>
+        <a href="#contact">Kontakta oss</a>
+      </nav>
+    </header>
+
+    <main class="book-page-main">
+      <aside class="info-section">
+        <i class="page-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="48px"
+            viewBox="0 -960 960 960"
+            width="48px"
+          >
+            <path
+              d="M360-120v-200q-62-5-121.5-14T120-360l20-80q83 23 168 31.5t172 8.5q86 0 171-8.5T820-440l20 80q-60 17-119.5 26T600-320v200H360Zm120-320q-34 0-57-23t-23-57q0-33 23-56.5t57-23.5q33 0 56.5 23.5T560-520q0 34-23.5 57T480-440ZM180-560q-26 0-43-17t-17-43q0-25 17-42.5t43-17.5q25 0 42.5 17.5T240-620q0 26-17.5 43T180-560Zm600 0q-26 0-43-17t-17-43q0-25 17-42.5t43-17.5q25 0 42.5 17.5T840-620q0 26-17.5 43T780-560ZM290-710q-26 0-43-17t-17-43q0-25 17-42.5t43-17.5q25 0 42.5 17.5T350-770q0 26-17.5 43T290-710Zm380 0q-26 0-43-17t-17-43q0-25 17-42.5t43-17.5q25 0 42.5 17.5T730-770q0 26-17.5 43T670-710Zm-190-50q-26 0-43-17t-17-43q0-25 17-42.5t43-17.5q25 0 42.5 17.5T540-820q0 26-17.5 43T480-760Z"
+            />
+          </svg>
+        </i>
+        <p>
+          Här ser ni våran toplista samt Nyheter och Bästsäljare som vi har
+          tillgängliga.
+        </p>
+        <p>
+          Har du frågor om våra böcker/titlar
+          <a class="contact" href="#contact">kontakta oss</a> på telefon eller
+          mail.
+        </p>
+      </aside>
+
+      <section class="books-section">
+        <h2>TOPPLISTA</h2>
+        <section class="top10">
+          <ol>
+            <li>
+              <p><b>Den sista nyckeln</b> av Anna Svensson</p>
+            </li>
+            <li>
+              <p><b>Skuggor i mörkret</b> av Johan Lindqvist</p>
+            </li>
+            <li>
+              <p><b>Echo av framtiden</b> av Lisa Andersson</p>
+            </li>
+            <li>
+              <p><b>Förtrollad stad</b> av Erik Johansson</p>
+            </li>
+            <li>
+              <p><b>Det gömda landskapet</b> av Maria Holm</p>
+            </li>
+          </ol>
+          <ol start="6">
+            <li>
+              <p><b>Svart fjäder</b> av Peter Nilsson</p>
+            </li>
+            <li>
+              <p><b>Vinden viskar vidare</b> av Karin Berg</p>
+            </li>
+            <li>
+              <p><b>Fallet i vintermörkret</b> av Daniel Karlsson</p>
+            </li>
+            <li>
+              <p><b>Stjärnljus och skuggor</b> av Sofia Eriksson</p>
+            </li>
+            <li>
+              <p><b>Bortom horisonten</b> av Emil Larsson</p>
+            </li>
+          </ol>
+        </section>
+
+        <h2>Våra boknyheter</h2>
+
+        <article>
+          <section class="ribbon-NYHET">NYHET</section>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQb6BB-SCqoPElz42DKa4tg1TPQZU_kGt0zHkMb_7I0uEnBwQ_Dk6pOvS1dAc4Do99pdm4yt1ixXtRnlzdZkOTTqSxxH8GiUApx6xTvAw0&usqp=CAc"
+            alt="Författare: Rebecca Yarros. ONYX STORM, möt mörkret. En drake utan sin ryttare är en tragedi. En ryttare utan sin drake är död. Empyrén 3"
+          />
+          <section class="book-info">
+            <h3>ONYX STORM</h3>
+            <p>
+              "Onyx Storm" av Rebecca Yarros är en fängslande romantisk fantasy
+              som kombinerar episk äventyrsberättelse med djupa emotionella
+              band. Boken utforskar teman om makt, skuld och försoning, medan
+              den väver samman magi och mod i en värld fylld av faror och
+              kärlek.
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40px"
+              viewBox="0 -960 960 960"
+              width="40px"
+              fill="#504e4ed7"
+            >
+              <path
+                d="M291.33-271.33 244.67-318l127.66-128.67H80v-66.66h292.33L244.67-642l46.66-46.67L500-480 291.33-271.33Zm242-28.67v-66.67H880V-300H533.33Zm0-293.33V-660H880v66.67H533.33Zm120 146.66v-66.66H880v66.66H653.33Z"
+              />
+            </svg>
+          </section>
+        </article>
+
+        <article>
+          <section class="ribbon-BS">BÄSTSÄLJARE</section>
+          <img
+            src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRdHARUO2tdy_n8vHuFOjHFW5n_PDOF5LhY-rTTFSnkGNWJ3JD5HDq1ER42R7oF9HIADVy-loMBz6FxAnK85cedOYYa40wLxp_UxTSoaiYZQcN0abkO71g&usqp=CAc"
+            alt="Författare: Bengt Fredrikson, Andreas Palmaer. Saker som nästan ingen vet, alfabeta (inbunden)"
+          />
+          <section class="book-info">
+            <h3>Saker som nästan ingen vet</h3>
+            <p>
+              Denna berättelse utforskar människors dolda hemligheter och
+              beteenden, ofta kopplade till psykologi och sociala skuggor. Med
+              ett insiktsfullt och psykologiskt perspektiv granskar den det
+              mänskliga sinnet och hur osynliga aspekter påverkar våra liv,
+              relationer och identitet i vardagen.
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40px"
+              viewBox="0 -960 960 960"
+              width="40px"
+              fill="#504e4ed7"
+            >
+              <path
+                d="M291.33-271.33 244.67-318l127.66-128.67H80v-66.66h292.33L244.67-642l46.66-46.67L500-480 291.33-271.33Zm242-28.67v-66.67H880V-300H533.33Zm0-293.33V-660H880v66.67H533.33Zm120 146.66v-66.66H880v66.66H653.33Z"
+              />
+            </svg>
+          </section>
+        </article>
+
+        <article>
+          <section class="ribbon-NYHET">NYHET</section>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRxOFn_48LYKEoOIpLI_SGYmIlz7l-9Rj_3dERf3YB7G7F0GFV_KGhT209-6V5EqBHXaUOagFfVf7HpAvWS0Mn19-ODgrx5mgKsdSwb5g&usqp=CAc"
+            alt="Författare: Marion Blackwood. Empire of Flame and Throns, Flame and Thorns: Book one. (inbunden)"
+          />
+          <section class="book-info">
+            <h3>Empire of Flame and Thorns: 1</h3>
+            <p>
+              <b>Författare: Marion Blackwood.</b>
+              <br />
+              I en värld där magi och politik kolliderar, måste en ung hjälte
+              konfrontera sina mörkaste rädslor. Med svek, hemligheter och
+              brinnande passion kämpar hon för att rädda sitt kungarike och
+              hitta sin plats i ett farligt spel om makt, lojalitet och ära.
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40px"
+              viewBox="0 -960 960 960"
+              width="40px"
+              fill="#504e4ed7"
+            >
+              <path
+                d="M291.33-271.33 244.67-318l127.66-128.67H80v-66.66h292.33L244.67-642l46.66-46.67L500-480 291.33-271.33Zm242-28.67v-66.67H880V-300H533.33Zm0-293.33V-660H880v66.67H533.33Zm120 146.66v-66.66H880v66.66H653.33Z"
+              />
+            </svg>
+          </section>
+        </article>
+
+        <article>
+          <section class="ribbon-NYHET">NYHET</section>
+          <img
+            src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRe4IRgTfTbHzzRoPAUi-EfXpinWxxUN3eOjILaoxC_7O7yGpMoHCzp0isMKOr6PiE9yWDtjPfY6aHzPAJAWkjTdxrT0be8JiLF8m_IlA&usqp=CAc"
+            alt="Författare: Stefan Olafsson, Gustav Gelin. Uteliggarn som blev advokat, Berättat för Gustav Gelin (inbunden)"
+          />
+          <section class="book-info">
+            <h3>Uteliggaren som blev advokat</h3>
+            <p>
+              <b>Författare: Stefan Olafsson och Gustav Gelin.</b>
+              <br />
+              I "Uteliggaren som blev advokat" delar Stefan Olafsson, med hjälp
+              av journalisten Gustav Gelin, sin otroliga livsresa. Han
+              tillbringade tio år som hemlös narkoman, levde i misär och åkte in
+              på anstalter. Men när han en natt räddade en äldre kvinna på
+              Östermalm började en ny tillvaro som jurist. En hoppfull
+              berättelse om förvandling, uthållighet och att aldrig ge upp sina
+              drömmar.
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40px"
+              viewBox="0 -960 960 960"
+              width="40px"
+              fill="#504e4ed7"
+            >
+              <path
+                d="M291.33-271.33 244.67-318l127.66-128.67H80v-66.66h292.33L244.67-642l46.66-46.67L500-480 291.33-271.33Zm242-28.67v-66.67H880V-300H533.33Zm0-293.33V-660H880v66.67H533.33Zm120 146.66v-66.66H880v66.66H653.33Z"
+              />
+            </svg>
+          </section>
+        </article>
+
+        <article>
+          <section class="ribbon-BS">BÄSTSÄLJARE</section>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSD9lD_-kcnoHjw5noN0vzDxOE3cUiTHEkKGxnScsPEVYU_Gq3yaB-aOZT4m5kQWr4nEjI06BbtU0UNwmb56_oos5BJEj0L15CRBtmXRw&usqp=CAc"
+            alt="Författare: Jan Guillou. Anteckningar från Aftonsången. pirat förlaget (inbunden)"
+          />
+          <section class="book-info">
+            <h3>Anteckningar från aftonsången</h3>
+            <p>
+              <b>Författare: Jan Guillou</b>
+              <br />
+              I skuggan av efterkrigstidens Sverige förenas politik, kärlek och
+              moral i Jan Guillous intensiva roman. Genom en ung soldats ögon
+              utforskas lojalitetens pris, maktens korridorer och människans
+              försök att finna mening när ideal krockar med verklighet. En
+              stark, tänkvärd berättelse om svek och försoning.
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40px"
+              viewBox="0 -960 960 960"
+              width="40px"
+              fill="#504e4ed7"
+            >
+              <path
+                d="M291.33-271.33 244.67-318l127.66-128.67H80v-66.66h292.33L244.67-642l46.66-46.67L500-480 291.33-271.33Zm242-28.67v-66.67H880V-300H533.33Zm0-293.33V-660H880v66.67H533.33Zm120 146.66v-66.66H880v66.66H653.33Z"
+              />
+            </svg>
+          </section>
+        </article>
+
+        <article>
+          <section class="ribbon-NYHET">NYHET</section>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQpKCBe9fVR0dRY-kRSsryYFfVSRI1eRw9_XUTKdjAE1MnXP-owly_nuAkeg6bsSVRzN3Qn5cygfzN2UXHh_AEOy5eqacHhNZsyQ082Aw&usqp=CAc"
+            alt="Omslag med en bruten gren med rosa och vita blommor, där den är delad i mitten. Blommorna är framträdande mot en lugn bakgrund, vilket ger en känsla av skönhet och sårbarhet."
+          />
+          <section class="book-info">
+            <h3>VÅGA VARA ILLA OMTYCKT</h3>
+            <p>
+              <b>Författare: Ichiro Kishimi, Fumitake Koga</b>
+              <br />
+              Våga vara illa omtyckt är en självhjälpsbok som bjuder på djupa
+              insikter om livsfrågor och personlig utveckling. Genom en dialog
+              mellan en filosof och en ung man visar boken hur modet att stå
+              emot andras förväntningar kan leda till sann frihet och lycka. En
+              lättläst och tankeväckande guide för att våga förändras och vara
+              sann mot sig själv.
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40px"
+              viewBox="0 -960 960 960"
+              width="40px"
+              fill="#504e4ed7"
+            >
+              <path
+                d="M291.33-271.33 244.67-318l127.66-128.67H80v-66.66h292.33L244.67-642l46.66-46.67L500-480 291.33-271.33Zm242-28.67v-66.67H880V-300H533.33Zm0-293.33V-660H880v66.67H533.33Zm120 146.66v-66.66H880v66.66H653.33Z"
+              />
+            </svg>
+          </section>
+        </article>
+
+        <article>
+          <section class="ribbon-BS">BÄSTSÄLJARE</section>
+          <img
+            src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSRFKrqZqCpzFF-Ob7lmWwn0qsniVAszsYwvao7E-DUReU8YbcUUgogIggJTR8vgMop_M4fA3ZBMhJeYJZkm1kK9rm_i5RS_dflP2FlD1NlR4YD0HS_fTw0&usqp=CAc"
+            alt="Bokomslag till Sot — mörkt, dämpat omslag med en ensam siluett mot ett skymningsaktigt landskap, sotiga toner och stiliserad titel i kontrast."
+          />
+          <section class="book-info">
+            <h3>SOT</h3>
+            <p>
+              <b>Författare: Sara Strömberg</b>
+              <br />
+              I Sot följer vi en kvinna som återvänder till sitt hem efter en
+              tragedi och möts av aska, minnen och tysta hemligheter. Med svedda
+              relationer och oväntade allianser söker hon sanningen bakom det
+              som brunnit — och lär sig att återuppbygga både platsen och sig
+              själv ur rykande spillror.
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40px"
+              viewBox="0 -960 960 960"
+              width="40px"
+              fill="#504e4ed7"
+            >
+              <path
+                d="M291.33-271.33 244.67-318l127.66-128.67H80v-66.66h292.33L244.67-642l46.66-46.67L500-480 291.33-271.33Zm242-28.67v-66.67H880V-300H533.33Zm0-293.33V-660H880v66.67H533.33Zm120 146.66v-66.66H880v66.66H653.33Z"
+              />
+            </svg>
+          </section>
+        </article>
+
+        <article>
+          <section class="ribbon-BS">BÄSTSÄLJARE</section>
+          <img
+            src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSrLf6ArhgNZQEycY0wKLvjiThebu_3-31IupSqAX1KHdPvSWRX7ME_YwRMpguqRSrAsGgvJNu49igQGMH671fg4YAix1xaBZ3NiW_v_mI&usqp=CAc"
+            alt="Omslaget i olika nyanser av gult, Rund cirkel i mitten fylld av moln; inom cirkeln två drakar, en svart och en vit siluett, boktiteln står i cirkeln och texten 
+                Flyg eller dö visas också på omslaget."
+          />
+          <section class="book-info">
+            <h3>FOURTH WING</h3>
+            <p>
+              <b>Författare: Rebecca Yarros</b>
+              <br />
+              I Fourth Wing kastas en ung rekryt in i en brutal flygskola där
+              drakar och lojaliteter prövas. Mellan träning, vänskap och
+              förbjuden dragkontakt tvingas hon välja mellan överlevnad och
+              hjärta. En pulserande berättelse om mod, förlust och att finna sin
+              plats när himlen kräver allt.
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40px"
+              viewBox="0 -960 960 960"
+              width="40px"
+              fill="#504e4ed7"
+            >
+              <path
+                d="M291.33-271.33 244.67-318l127.66-128.67H80v-66.66h292.33L244.67-642l46.66-46.67L500-480 291.33-271.33Zm242-28.67v-66.67H880V-300H533.33Zm0-293.33V-660H880v66.67H533.33Zm120 146.66v-66.66H880v66.66H653.33Z"
+              />
+            </svg>
+          </section>
+        </article>
+
+        <article>
+          <section class="ribbon-NYHET">NYHET</section>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRaTctQIInte_171j2f5-P5iofK-hMqqsAfptnVdR2-tWEK-e9sPo4ltGrGBx1jP0eSIFx3EYP8fVFGPDVkclurJSBoWK2YRvw4x_utkZ--4Q-NFKvStPU&usqp=CAc"
+            alt="Bokomslag där vaccinationssprutor bildar ett slott, med ett brett gult streck som en väg från botten till slottets fästning. Båda sidor av vägen är radade vaccinationssprutor som soldater"
+          />
+          <section class="book-info">
+            <h3>COVIDKUPPEN</h3>
+            <p>
+              <b>Författare: Debbie Lerman</b>
+              <br />
+              I Covidkuppen granskas mars 2020 då pandemihanteringen enligt
+              författaren omvandlades till en militariserad operation. Lerman
+              följer beslutsfattandet i USA och andra länder, presenterar
+              dokument, vittnesmål och analyser som ifrågasätter vem som tog
+              kontroll och varför — en kritisk och välunderbyggd genomgång av
+              pandemins politiska maktspel.
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40px"
+              viewBox="0 -960 960 960"
+              width="40px"
+              fill="#504e4ed7"
+            >
+              <path
+                d="M291.33-271.33 244.67-318l127.66-128.67H80v-66.66h292.33L244.67-642l46.66-46.67L500-480 291.33-271.33Zm242-28.67v-66.67H880V-300H533.33Zm0-293.33V-660H880v66.67H533.33Zm120 146.66v-66.66H880v66.66H653.33Z"
+              />
+            </svg>
+          </section>
+        </article>
+
+        <article>
+          <section class="ribbon-NYHET">NYHET</section>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQus2twjQfpIDEy619JIxuH-XqXhnyRkIr2b3Fe5X1eCD8s42Gl0ThlWQ2_CjTrC8S6MovwBjR1Wb_5pbi92n7gNqynbZ5JZYLL7VbImOXoSAdc55ic5l0&usqp=CAc"
+            alt="mardrömsliknande kanin som har röda pupiller, omgiven av en mörk, oskarp bakgrund. Kaninen har ett hotfullt uttryck och skapar en kuslig, spännande stämning."
+          />
+          <section class="book-info">
+            <h3>Försökskaninen</h3>
+            <p>
+              <b>Författare: Nicklas Wrångberg</b><br />
+              I Försökskaninen ställs frågan om ett hemligt experiment på Sankta
+              Gertruds sjukhus 1952. När dokument och obeväpnade kroppar dyker
+              upp kopplas det till en mörk konspiration om organhandel och
+              människosmuggling. En spännande berättelse om hemliga forskares
+              skyldigheter och dolda maktspel.
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40px"
+              viewBox="0 -960 960 960"
+              width="40px"
+              fill="#504e4ed7"
+            >
+              <path
+                d="M291.33-271.33 244.67-318l127.66-128.67H80v-66.66h292.33L244.67-642l46.66-46.67L500-480 291.33-271.33Zm242-28.67v-66.67H880V-300H533.33Zm0-293.33V-660H880v66.67H533.33Zm120 146.66v-66.66H880v66.66H653.33Z"
+              />
+            </svg>
+          </section>
+        </article>
+      </section>
+    </main>
+
+    <footer
+      class="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x gap-4 md:gap-8 bg-black text-white text-sm md:text-base p-3 md:p-6"
+    >
+      <h3 class="text-xl">Pärmar & Poesi</h3>
+      <section class="p-3">
+        <h4 class="font-medium">Adress</h4>
+        <p>Gruppvägen 5</p>
+        <p>123 45 nörrland</p>
+      </section>
+      <section class="p-3">
+        <h4 class="font-medium">Öppettider</h4>
+        <p>mån-fre 09-20</p>
+        <p>lör 10-17</p>
+        <p>sön 11-15</p>
+      </section>
+      <section id="contact" class="p-3">
+        <h4 class="font-medium">Kontakt</h4>
+        <p>070 000 00 00</p>
+        <p>info@parmarpoesi.com</p>
+      </section>
+    </footer>
+  </body>
+</html>
